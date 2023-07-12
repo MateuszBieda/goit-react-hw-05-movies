@@ -15,7 +15,7 @@ const Home = () => {
           console.log(error);
         });
     };
-    fetchTrending();
+     fetchTrending();
   }, []);
 
   return (
@@ -24,7 +24,7 @@ const Home = () => {
 
       <ul>
         {data.map(movie => (
-          <li key={movie.id}>
+          <li >
             <h3>{movie.title}</h3>
           </li>
         ))}
