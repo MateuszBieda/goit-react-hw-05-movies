@@ -2,7 +2,7 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import { fetchTrendingMovies } from 'services/api.js';
 
-const Home = () => {
+export const Home = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -24,7 +24,7 @@ const Home = () => {
 
       <ul>
         {data.map(movie => (
-          <li >
+          <li key={movie.id} >
             <h3>{movie.title}</h3>
           </li>
         ))}
@@ -32,5 +32,4 @@ const Home = () => {
     </>
   );
 };
-
 export default Home;
