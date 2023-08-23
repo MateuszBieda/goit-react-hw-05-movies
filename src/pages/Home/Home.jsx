@@ -1,7 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import { fetchTrendingMovies } from 'services/api.js';
-
+import { Link } from 'react-router-dom';
 export const Home = () => {
   const [data, setData] = useState([]);
 
@@ -15,7 +15,7 @@ export const Home = () => {
           console.log(error);
         });
     };
-     fetchTrending();
+    fetchTrending();
   }, []);
 
   return (
@@ -24,8 +24,10 @@ export const Home = () => {
 
       <ul>
         {data.map(movie => (
-          <li key={movie.id} >
-            <h3>{movie.title}</h3>
+          <li key={movie.id}>
+            <Link to={movie.title}>
+              <h3>{movie.title}</h3>
+            </Link>
           </li>
         ))}
       </ul>

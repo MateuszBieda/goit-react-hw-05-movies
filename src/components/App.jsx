@@ -1,7 +1,8 @@
-import { Routes, Route, Link } from 'react-router-dom';
-import { lazy } from 'react';
 import React from 'react';
-
+import { Routes, Route } from 'react-router-dom';
+import { lazy } from 'react';
+//import { Header, Link, Container } from './App.styled';
+import { SharedLayout } from './SharedLayout/SharedLayout';
 //import { Home } from 'pages/Home/Home.jsx';
 import { Movies } from '../pages/Movies/Movies.jsx';
 // import { MovieDetails } from '../pages/MovieDetails/MovieDetails.jsx';
@@ -12,16 +13,12 @@ const Home = lazy(() => import('pages/Home/Home.jsx'));
 
 export const App = () => {
   return (
-    <>
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/movies">Movies</Link>
-      </nav>
+    <Routes>
+      <Route path="/" element ={<SharedLayout/>}>
+        <Route index element={<Home/>}/>
+        <Route path ="movies" element={<Movies/>}/>
 
-      <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route path="/movies" element={<Movies />} />
-      </Routes>
-    </>
+      </Route>
+    </Routes>
   );
 };

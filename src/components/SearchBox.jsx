@@ -1,11 +1,11 @@
-import { Input,Form,Button } from './SearchBox.styled';
+import { Input, Form, Button } from './SearchBox.styled';
 
 export const SearchBox = ({ onChange, onSubmit }) => {
   return (
     <Form onSubmit={onSubmit}>
-    <Input type="text" onChange={onChange} />
+      <Input type="text" onChange={onChange} />
 
-    <Button type="submit">Search</Button>
-  </Form>
+      <Button type="submit">Search</Button>
+    </Form>
   );
 };

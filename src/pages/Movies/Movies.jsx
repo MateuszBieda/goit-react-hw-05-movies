@@ -2,7 +2,7 @@ import { SearchBox } from 'components/SearchBox';
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { fetchMoviesByKeywords } from 'services/api';
-import { MoviesList } from 'components/MovieList.jsx';  
+import { MoviesList } from 'components/MovieList.jsx';
 
 export const Movies = () => {
   const [movies, setMovies] = useState([]);
@@ -15,6 +15,7 @@ export const Movies = () => {
       return;
     }
     fetchMoviesByKeywords(query).then(setMovies);
+    console.log(query);
   }, [searchParams]);
 
   const handleChange = e => {
