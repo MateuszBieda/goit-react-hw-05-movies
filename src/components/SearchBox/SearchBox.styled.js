@@ -20,7 +20,7 @@ margin-bottom: 20px;
 margin-top: 15px;
 display: flex;
 gap: 20px;
-justify-content: center;
+justify-content: left;
 align-items: center;
 }
 

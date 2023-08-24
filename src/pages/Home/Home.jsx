@@ -1,37 +1,19 @@
-import React from 'react';
+import { fetchTrendingMovies } from 'services/api';
 import { useEffect, useState } from 'react';
-import { fetchTrendingMovies } from 'services/api.js';
-import { Link } from 'react-router-dom';
-export const Home = () => {
-  const [data, setData] = useState([]);
+import { MoviesList } from 'components/MovieList/MovieList';
+
+const Home = () => {
+  const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    const fetchTrending = () => {
-      fetchTrendingMovies()
-        .then(movies => {
-          setData(movies);
-        })
-        .catch(error => {
-          console.log(error);
-        });
-    };
-    fetchTrending();
+    fetchTrendingMovies().then(setMovies);
   }, []);
 
   return (
     <>
-      <h2>Trending today</h2>
-
-      <ul>
-        {data.map(movie => (
-          <li key={movie.id}>
-            <Link to={movie.title}>
-              <h3>{movie.title}</h3>
-            </Link>
-          </li>
-        ))}
-      </ul>
+      <MoviesList movies={movies} />
     </>
   );
 };
+
 export default Home;
