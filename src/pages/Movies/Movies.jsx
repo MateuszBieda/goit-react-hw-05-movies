@@ -46,7 +46,7 @@ const Movies = () => {
       <List>
         {searchMovies.map(({ id, title }) => (
           <li key={id}>
-            <MovieLink to={`${id}`} state={{ from: 'movies/' }}>
+            <MovieLink to={`${id}`} state={{ from: 'movies' }}>
               <MovieName>{title}</MovieName>
             </MovieLink>
           </li>
