@@ -1,17 +1,17 @@
 import { fetchTrendingMovies } from 'services/api';
 import { useEffect, useState } from 'react';
-import { MoviesList } from 'components/MovieList/MovieList';
+import MoviesList from 'components/MoviesList/MoviesList';
 
 const Home = () => {
-  const [movies, setMovies] = useState([]);
+  const [trendingMovies, setTrendingMovies] = useState([]);
 
   useEffect(() => {
-    fetchTrendingMovies().then(setMovies);
+    fetchTrendingMovies().then(setTrendingMovies);
   }, []);
 
   return (
     <>
-      <MoviesList movies={movies} />
+      <MoviesList movies={trendingMovies} />
     </>
   );
 };

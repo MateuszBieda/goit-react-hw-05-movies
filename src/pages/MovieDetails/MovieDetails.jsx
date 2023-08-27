@@ -1,15 +1,8 @@
-import { useEffect,useState, Suspense } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 import { useParams, Outlet, useLocation } from 'react-router-dom';
 import { fetchMoviesDetailsById } from 'services/api';
 import { MovieCard } from 'components/MovieCard/MovieCard';
 import { BackLink, AddInfo, Container } from './MovieDetailes.styled';
-
-
-
-
-
-
-
 
 const MovieDetails = () => {
   const [movieDetails, setMovieDetails] = useState(null);
