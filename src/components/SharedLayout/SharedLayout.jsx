@@ -8,8 +8,8 @@ export const SharedLayout =()=>{
         <Container>
           <Header>
             <nav>
-              <Link to="/">Home</Link>
-              <Link to="/movies">Movies</Link>
+              <Link to="/goit-react-hw-05-movies/">Home</Link>
+              <Link to="/goit-react-hw-05-movies//movies">Movies</Link>
             </nav>
           </Header>
       <Suspense fallback={<div>Loading page...</div>}>
