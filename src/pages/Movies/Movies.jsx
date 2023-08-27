@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import { useSearchParams, useLocation } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 import { SearchBox } from 'components/SearchBox/SearchBox';
-import MoviesList from 'components/MoviesList/MoviesList';
+// import MoviesList from 'components/MoviesList/MoviesList';
 import { fetchMoviesByKeywords } from 'services/api';
 import {
   List,
@@ -12,7 +12,7 @@ import {
 const Movies = () => {
   const [query, setQuery] = useState('');
   const [searchMovies, setSearchMovies] = useState([]);
-  const location = useLocation();
+  // const location = useLocation();
 
   const [searchParams, setSearchParams] = useSearchParams();
 
