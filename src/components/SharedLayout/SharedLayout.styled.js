@@ -23,13 +23,11 @@ export const Link = styled(NavLink)`
   font-size: 20px;
   font-weight: 500;
   border-radius: 4px;
-text-decoration: none;
-
-
+  text-decoration: none;
+  border: 1px solid green;
+  margin-right: 10px;
   &.active {
     color: white;
-    background-color: orange;
-    text-decoration: underline white 2px;
-  
+    background-color: green;
   }
 `;

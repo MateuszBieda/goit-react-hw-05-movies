@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const List = styled.ul`
-  color: brown;
+  color: black;
   font-size: 18px;
   font-weight: 400;
   display: flex;
