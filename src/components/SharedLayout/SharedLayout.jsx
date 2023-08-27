@@ -8,7 +8,7 @@ export const SharedLayout =()=>{
         <Container>
           <Header>
             <nav>
-              <Link to="/">Home</Link>
+              <Link to="https://mateuszbieda.github.io/goit-react-hw-05-movies/">Home</Link>
               <Link to="/movies">Movies</Link>
             </nav>
           </Header>
