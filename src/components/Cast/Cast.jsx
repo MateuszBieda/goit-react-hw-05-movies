@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchMoviesCastDetails } from 'services/api';
 import { List, Item, Img, Name, Character } from './Cast.styled';
+import PropTypes from 'prop-types';
 
  const Cast = () => {
   const [cast, setCast] = useState(null);
@@ -34,3 +35,10 @@ import { List, Item, Img, Name, Character } from './Cast.styled';
 };
 
 export default Cast;
+
+
+Cast.propTypes = {
+  id: PropTypes.number.isRequired,
+  cast: PropTypes.array.isRequired,
+  fetchMoviesCastDetails: PropTypes.func.isRequired,
+}.isRequired;
