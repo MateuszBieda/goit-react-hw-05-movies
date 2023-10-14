@@ -16,7 +16,7 @@ export const MovieCard = ({ movie }) => {
   const imgUrl = imgBaseUrl.concat(poster_path);
   const releaseDate = release_date.slice(0, 4);
   const voteScore = vote_average.toFixed(1);
-  const genresList = genres.map(ganre => ganre.name).join(', ');
+  const genresList = genres.map(genre => genre.name).join(', ');
 
   return (
     <Container>
