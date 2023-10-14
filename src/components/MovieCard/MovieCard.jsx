@@ -20,7 +20,15 @@ export const MovieCard = ({ movie }) => {
 
   return (
     <Container>
-      <Img src={poster_path?imgUrl:"https://upload.wikimedia.org/wikipedia/commons/f/f9/No-image-available.jpg"} alt="{title}" width="350" />
+      <Img
+        src={
+          poster_path
+            ? imgUrl
+            : 'https://upload.wikimedia.org/wikipedia/commons/f/f9/No-image-available.jpg'
+        }
+        alt="{title}"
+        width="350"
+      />
       <Wrapper>
         <Title>
           {title} <Year>({releaseDate})</Year>
